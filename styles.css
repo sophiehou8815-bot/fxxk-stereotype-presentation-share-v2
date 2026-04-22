@@ -342,17 +342,17 @@ blockquote {
 
 .manifesto-layout {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: var(--space-lg);
+  grid-template-columns: minmax(20rem, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(1.25rem, 2vw, 2.2rem);
   align-items: start;
 }
 
 .manifesto-lead {
-  grid-column: 1 / span 6;
+  grid-column: 1;
   display: grid;
   gap: var(--space-sm);
   padding-top: var(--space-xs);
-  max-width: 42rem;
+  max-width: none;
 }
 
 .manifesto-lead__line {
@@ -363,7 +363,7 @@ blockquote {
 }
 
 .manifesto-grid {
-  grid-column: 7 / -1;
+  grid-column: 2;
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: var(--space-md);
