@@ -348,21 +348,22 @@ blockquote {
 }
 
 .manifesto-lead {
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 6;
   display: grid;
   gap: var(--space-sm);
   padding-top: var(--space-xs);
+  max-width: 42rem;
 }
 
 .manifesto-lead__line {
-  max-width: 8ch;
+  max-width: 13ch;
   font-family: var(--font-display);
-  font-size: clamp(2.55rem, 3.9vw, 4.9rem);
-  line-height: 0.94;
+  font-size: clamp(2.45rem, 3.5vw, 4.35rem);
+  line-height: 0.98;
 }
 
 .manifesto-grid {
-  grid-column: 6 / -1;
+  grid-column: 7 / -1;
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: var(--space-md);
@@ -625,7 +626,7 @@ html[data-ready="true"] [data-reveal].is-visible {
   .manifesto-lead__line {
     max-width: none;
     font-size: clamp(1.9rem, 9vw, 3rem);
-    line-height: 0.96;
+    line-height: 1;
   }
 
   .manifesto-card p {
@@ -733,7 +734,7 @@ html[data-ready="true"] [data-reveal].is-visible {
   }
 
   .manifesto-lead__line {
-    font-size: 2.9rem;
+    font-size: 2.55rem;
   }
 
   .quote-block {
