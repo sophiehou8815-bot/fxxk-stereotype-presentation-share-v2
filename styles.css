@@ -475,19 +475,20 @@ blockquote {
 }
 
 .participation-copy {
-  grid-column: 2 / span 10;
+  grid-column: 1 / -1;
   display: grid;
   gap: var(--space-sm);
   margin-top: 0;
   max-width: none;
   padding-top: var(--space-sm);
+  justify-items: start;
 }
 
 .quote-block {
   display: inline-block;
   width: max-content;
   max-width: none;
-  font-size: clamp(1.45rem, 1.05rem + 0.95vw, 2.15rem);
+  font-size: clamp(1.25rem, 0.95rem + 0.72vw, 1.75rem);
   line-height: 1.04;
   white-space: nowrap;
 }
