@@ -342,68 +342,44 @@ blockquote {
 
 .manifesto-layout {
   display: grid;
-  grid-template-columns: minmax(20rem, 0.92fr) minmax(0, 1.08fr);
-  gap: clamp(1.25rem, 2vw, 2.2rem);
+  gap: var(--space-lg);
   align-items: start;
 }
 
 .manifesto-lead {
-  grid-column: 1;
   display: grid;
-  gap: var(--space-sm);
+  gap: 0.2em;
   padding-top: var(--space-xs);
-  max-width: none;
+  justify-items: start;
 }
 
 .manifesto-lead__line {
-  max-width: 13ch;
   font-family: var(--font-display);
-  font-size: clamp(2.45rem, 3.5vw, 4.35rem);
+  font-size: clamp(2.4rem, 3.3vw, 4rem);
   line-height: 0.98;
+  white-space: nowrap;
 }
 
 .manifesto-grid {
-  grid-column: 2;
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-md);
 }
 
 .manifesto-card {
   display: flex;
   align-items: flex-start;
-  min-height: 12rem;
+  min-height: 13.5rem;
   padding: var(--space-md);
-  border: 1px solid rgba(17, 17, 15, 0.08);
+  border: 1px solid rgba(17, 17, 15, 0.1);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 0.58);
   box-shadow: 0 18px 44px rgba(17, 17, 15, 0.06);
 }
 
 .manifesto-card p {
-  font-size: clamp(1.12rem, 0.98rem + 0.45vw, 1.42rem);
+  font-size: clamp(1.12rem, 0.98rem + 0.4vw, 1.36rem);
   line-height: 1.4;
-}
-
-.manifesto-card--wide {
-  grid-column: 1 / span 4;
-}
-
-.manifesto-card--tall {
-  grid-column: 5 / -1;
-  grid-row: span 2;
-  min-height: 20rem;
-  background: rgba(226, 214, 199, 0.76);
-}
-
-.manifesto-card--support {
-  grid-column: 1 / span 3;
-}
-
-.manifesto-card--question {
-  grid-column: 4 / span 4;
-  background: rgba(255, 255, 255, 0.72);
-  border-color: rgba(17, 17, 15, 0.12);
 }
 
 .triptych-grid {
@@ -574,8 +550,11 @@ html[data-ready="true"] [data-reveal].is-visible {
   }
 
   .triptych-grid,
-  .manifesto-grid,
   .participation-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .manifesto-grid {
     grid-template-columns: 1fr;
   }
 
@@ -594,9 +573,7 @@ html[data-ready="true"] [data-reveal].is-visible {
     margin-top: 0;
   }
 
-  .manifesto-card,
-  .manifesto-card--tall {
-    grid-column: 1 / -1;
+  .manifesto-card {
     min-height: auto;
   }
 
@@ -624,9 +601,9 @@ html[data-ready="true"] [data-reveal].is-visible {
   }
 
   .manifesto-lead__line {
-    max-width: none;
     font-size: clamp(1.9rem, 9vw, 3rem);
     line-height: 1;
+    white-space: normal;
   }
 
   .manifesto-card p {
@@ -735,6 +712,7 @@ html[data-ready="true"] [data-reveal].is-visible {
 
   .manifesto-lead__line {
     font-size: 2.55rem;
+    white-space: nowrap;
   }
 
   .quote-block {
