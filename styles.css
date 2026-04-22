@@ -486,6 +486,7 @@ blockquote {
 .quote-block {
   font-size: clamp(1.75rem, 1.25rem + 1.5vw, 3rem);
   line-height: 1.04;
+  white-space: nowrap;
 }
 
 .closing-layout {
@@ -603,6 +604,10 @@ html[data-ready="true"] [data-reveal].is-visible {
   .manifesto-lead__line {
     font-size: clamp(1.9rem, 9vw, 3rem);
     line-height: 1;
+    white-space: normal;
+  }
+
+  .quote-block {
     white-space: normal;
   }
 
