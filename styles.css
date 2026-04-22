@@ -431,16 +431,24 @@ blockquote {
   grid-column: 2 / span 4;
   display: grid;
   gap: var(--space-sm);
-  max-width: 25rem;
+  max-width: 32rem;
   padding-top: var(--space-sm);
 }
 
 .meta-link {
+  display: inline-block;
+  width: max-content;
+  max-width: none;
   padding-top: var(--space-xs);
   color: rgba(243, 238, 230, 0.8);
   white-space: nowrap;
   word-break: normal;
   overflow-wrap: normal;
+}
+
+.meta-link a {
+  display: inline-block;
+  white-space: inherit;
 }
 
 .music-collage {
@@ -610,10 +618,6 @@ html[data-ready="true"] [data-reveal].is-visible {
   .manifesto-lead__line {
     font-size: clamp(1.9rem, 9vw, 3rem);
     line-height: 1;
-    white-space: normal;
-  }
-
-  .meta-link {
     white-space: normal;
   }
 
